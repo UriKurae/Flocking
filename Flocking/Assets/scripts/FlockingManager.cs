@@ -8,37 +8,35 @@ public class FlockingManager : MonoBehaviour
     public GameObject prefab;
 
     public Vector3 SwimLimits;
-   
-    public bool bounded;
-    public bool randomize;
+
     public bool followLider;
     public bool danger;
 
     public GameObject lider;
 
-    public float minSpeed = 0.5f;
-    public float maxSpeed = 2.0f;
-    public float neighbourDistance = 20.0f;
-    public float rotationSpeed = 0.2f;
+    public float minSpeed;
+    public float maxSpeed;
+    public float neighbourDistance;
+    public float rotationSpeed;
+
+    // Zones of action
+    public float dangerZone;
+    public float liderZone;
 
     // Start is called before the first frame update
     void Start()
     {
-        minSpeed = 0.5f;
+        minSpeed = 1.5f;
         maxSpeed = 2.0f;
-        neighbourDistance = 20.0f;
-        rotationSpeed = 0.2f;
+        neighbourDistance = 50.0f;
+        rotationSpeed = 0.5f;
+        dangerZone = 5.0f;
+        liderZone = 10.0f;
 
-        Flocking();
+        SetUp();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Flocking()
+    void SetUp()
     {
         for (int i = 0; i < allFish.Length; ++i)
         {

@@ -86,9 +86,26 @@ public class Flock : MonoBehaviour
             {
                 float distance = Vector3.Distance(go.transform.position,
                                                   transform.position);
+
                 if (distance <= myManager.neighbourDistance)
                     separation -= (transform.position - go.transform.position) /
                                   (distance * distance);
+
+                if (myManager.danger)
+                {
+                    // Escape
+                    if (distance <= myManager.transform.position.magnitude)
+                        separation += (transform.position - myManager.transform.position) /
+                                          (distance * distance); 
+                }
+
+                if (myManager.followLider)
+                {
+                    // Chase
+                    if (distance <= myManager.transform.position.magnitude)
+                        separation -= (transform.position - myManager.transform.position) /
+                                          (distance * distance); 
+                }
             }
         }
         return separation;

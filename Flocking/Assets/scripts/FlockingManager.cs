@@ -12,17 +12,23 @@ public class FlockingManager : MonoBehaviour
     public bool bounded;
     public bool randomize;
     public bool followLider;
+    public bool danger;
 
     public GameObject lider;
 
-    public float minSpeed = 2.0f;
-    public float maxSpeed = 5.0f;
-    public float neighbourDistance = 2.0f;
-    public float rotationSpeed = 0.5f;
+    public float minSpeed = 0.5f;
+    public float maxSpeed = 2.0f;
+    public float neighbourDistance = 20.0f;
+    public float rotationSpeed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
+        minSpeed = 0.5f;
+        maxSpeed = 2.0f;
+        neighbourDistance = 20.0f;
+        rotationSpeed = 0.2f;
+
         Flocking();
     }
 

@@ -208,6 +208,7 @@ MonoBehaviour:
   bounded: 0
   randomize: 0
   followLider: 0
+  danger: 0
   lider: {fileID: 671017903}
   minSpeed: 0
   maxSpeed: 0
@@ -462,5 +463,17 @@ PrefabInstance:
       propertyPath: myManager
       value: 
       objectReference: {fileID: 671017904}
+    - target: {fileID: 8731104075204421075, guid: 25eb19f6fe4b59d44b8d642e461508e3, type: 3}
+      propertyPath: direction.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731104075204421075, guid: 25eb19f6fe4b59d44b8d642e461508e3, type: 3}
+      propertyPath: direction.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731104075204421075, guid: 25eb19f6fe4b59d44b8d642e461508e3, type: 3}
+      propertyPath: direction.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25eb19f6fe4b59d44b8d642e461508e3, type: 3}
